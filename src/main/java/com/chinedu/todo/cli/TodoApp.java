@@ -26,6 +26,7 @@ public class TodoApp {
         cmd.addSubcommand("list", new ListCommand(repo));
         cmd.addSubcommand("done", new DoneCommand(repo));
         cmd.addSubcommand("delete", new DeleteCommand(repo));
+        cmd.addSubcommand("export", new ExportCommand(repo));
         try{
             int exitCode = cmd.execute(args);
             System.exit(exitCode);
